@@ -1,0 +1,1 @@
+{\n  \"aiModels\": [{\n    \"name\": \"ModelA\",\n    \"version\": \"1.0\"\n  }, {\n    \"name\": \"ModelB\",\n    \"version\": \"2.0\"\n  }],\n  \"controllerSettings\": {\n    \"timeout\": 300,\n    \"maxRetries\": 5\n  }\n}
