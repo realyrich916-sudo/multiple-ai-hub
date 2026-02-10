@@ -1,0 +1,1 @@
+{"name": "multiple-ai-hub", "version": "1.0.0", "description": "A multiple AI hub project.", "main": "index.js", "scripts": {"test": "echo 'Error: no test specified' && exit 1"}, "repository": {"type": "git", "url": "git+https://github.com/realyrich916-sudo/multiple-ai-hub.git"}, "keywords": ["AI", "hub"], "author": "realyrich916-sudo", "license": "ISC"}
