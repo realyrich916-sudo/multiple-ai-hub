@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-AI Hub Controller</title>
+</head>
+<body>
+    <h1>Multi-AI Hub Controller</h1>
+    <p>Welcome to the Multi-AI Hub Controller, where multiple AI systems can be controlled and communicated with through a single platform.</p>
+    <script>
+        // Bridge Logic Example
+        class AIController {
+            constructor() {
+                this.ais = {}; // Store AI systems
+            }
+
+            addAI(aiName, aiInstance) {
+                this.ais[aiName] = aiInstance;
+            }
+
+            async communicateWithAI(aiName, message) {
+                if (this.ais[aiName]) {
+                    return await this.ais[aiName].respond(message);
+                } else {
+                    throw new Error(`AI ${aiName} not found.`);
+                }
+            }
+        }
+
+        // Example AI
+        class SimpleAI {
+            async respond(message) {
+                return `SimpleAI received: ${message}`;
+            }
+        }
+
+        const controller = new AIController();
+        const simpleAI = new SimpleAI();
+        controller.addAI('SimpleAI', simpleAI);
+
+        // Example usage
+        (async () => {
+            try {
+                const response = await controller.communicateWithAI('SimpleAI', 'Hello AI!');
+                console.log(response);
+            } catch (error) {
+                console.error(error);
+            }
+        })();
+    </script>
+</body>
+</html>
